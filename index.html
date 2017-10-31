@@ -130,6 +130,8 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all</li>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/encryption</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/export-page</li>
@@ -238,7 +240,13 @@ Error message and password prompt
 
 <li>BGP - Border Gateway Protocol</li>
 
+<li>bit</li>
+
 <li>broadcast routing</li>
+
+<li>byte</li>
+
+<li>CAM - Content-adressable Memory</li>
 
 <li>CIDR</li>
 
@@ -253,6 +261,8 @@ Error message and password prompt
 <li>DNS - Domain Name System</li>
 
 <li>DSL - Digital Subscriber Line</li>
+
+<li>dual stack network</li>
 
 <li>ECN - Explicit Congestion Notification</li>
 
@@ -333,6 +343,8 @@ Error message and password prompt
 <li>multihoming</li>
 
 <li>named pipe</li>
+
+<li>NAT - Network Address Translation</li>
 
 <li>NDP - Neighbour Discovery Protocol</li>
 
@@ -455,8 +467,11 @@ Error message and password prompt
 <div title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all">
 <pre>show</pre>
 </div>
+<div title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
+<pre>hide</pre>
+</div>
 <div title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/encryption">
-<pre>show</pre>
+<pre>hide</pre>
 </div>
 <div title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/export-page">
 <pre>show</pre>
@@ -489,7 +504,7 @@ Error message and password prompt
 <pre>show</pre>
 </div>
 <div title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/palette">
-<pre>show</pre>
+<pre>hide</pre>
 </div>
 <div title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/permaview">
 <pre>show</pre>
@@ -501,16 +516,16 @@ Error message and password prompt
 <pre>show</pre>
 </div>
 <div title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/storyview">
-<pre>show</pre>
+<pre>hide</pre>
 </div>
 <div title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/tag-manager">
 <pre>show</pre>
 </div>
 <div title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/theme">
-<pre>show</pre>
+<pre>hide</pre>
 </div>
 <div title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/timestamp">
-<pre>show</pre>
+<pre>hide</pre>
 </div>
 <div title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/unfold-all">
 <pre>show</pre>
@@ -8754,13 +8769,13 @@ Error message and password prompt
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
 <div created="20171029195647240" modified="20171029195655798" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/More</pre>
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/KeyboardShortcuts</pre>
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
 <div title="$:/state/tab--1963855381">
-<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
+<pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
 <div title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
@@ -8774,7 +8789,7 @@ Error message and password prompt
 <div title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div list="[[FDDI - Fiber Distributed Data Interface]] [[ISDN - Integrated Services Digital Network]] [[DSL - Digital Subscriber Line]] ethernet [[MAC - Medium Access Control]] [[PPP - Point-to-Point Protocol]] [[L2TP - Layer 2 Tunneling Protocol]] [[tunneling protocol]] [[OSPF - Open Shortest Path First]] [[NDP - Neighbour Discovery Protocol]] [[ARP - Address Resolution Protocol]] [[IPsec - Internet Protocol security]] [[IGMP - Internet Group Management Protocol]] [[ECN - Explicit Congestion Notification]] ICMPv6 [[ICMP - Internet Control Message Protocol]] [[IP - Internet Protocol]] [[RSVP - Resource Reservation Protocol]] [[SCTP - Stream Control Transmission Protocol]]" title="$:/StoryList">
+<div list="" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8790,7 +8805,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file://dc01/Home/client27/Downloads/index.html&quot;
+            &quot;text&quot;: &quot;file://dc01/Home/client27/Documents/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -8810,7 +8825,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/Home/client27/Downloads/index.html&quot;
+            &quot;text&quot;: &quot;/Home/client27/Documents/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9001,8 +9016,171 @@ Autonomous system numbers range from 1 to 64,511. When an ASN is needed, the nex
 <div tags="" title="BGP - Border Gateway Protocol">
 <pre>Border Gateway Protocol (BGP) is the protocol that addresses the routing of packets among different autonomous systems to connect them. BGP uses the ASN to uniquely identify each system. This is particularly important when routing and managing routing tables for external networks or autonomous systems around their borders.</pre>
 </div>
+<div tags="" title="bit">
+<pre>The bit (a portmanteau of binary digit)[1] is a basic unit of information used in computing and digital communications. A binary digit can have only one of two values, and may be physically represented with a two-state device. These state values are most commonly represented as either a 0or1.
+
+The two values of a binary digit can also be interpreted as logical values (true/false, yes/no), algebraic signs (+/−), activation states (on/off), or any other two-valued attribute. The correspondence between these values and the physical states of the underlying storage or device is a matter of convention, and different assignments may be used even within the same device or program. The length of a binary number may be referred to as its bit-length.
+
+In information theory, one bit is typically defined as the information entropy of a binary random variable that is 0 or 1 with equal probability,[2] or the information that is gained when the value of such a variable becomes known.[3][4]
+
+In quantum computing, a quantum bit or qubit is a quantum system that can exist in superposition of two classical (i.e., non-quantum) bit values.
+
+The symbol for binary digit is either simply bit (recommended by the IEC 80000-13:2008 standard) or lowercase b (recommended by the IEEE 1541-2002 and IEEE Std 260.1-2004 standards). A group of eight binary digits is commonly called one byte, but historically the size of the byte is not strictly defined.
+
+As a unit of information in information theory, the bit has alternatively been called a shannon,[5] named after Claude Shannon, the founder of field of information theory. This usage distinguishes the quantity of information from the form of the state variables used to represent it. When the logical values are not equally probable or when a signal is not conveyed perfectly through a communication system, a binary digit in the representation of the information will convey less than one bit of information. However, the shannon unit terminology is uncommon in practice.
+
+History[edit]
+
+The encoding of data by discrete bits was used in the punched cards invented by Basile Bouchon and Jean-Baptiste Falcon (1732), developed by Joseph Marie Jacquard (1804), and later adopted by Semen Korsakov, Charles Babbage, Hermann Hollerith, and early computer manufacturers like IBM. Another variant of that idea was the perforated paper tape. In all those systems, the medium (card or tape) conceptually carried an array of hole positions; each position could be either punched through or not, thus carrying one bit of information. The encoding of text by bits was also used in Morse code (1844) and early digital communications machines such as teletypes and stock ticker machines (1870).
+
+Ralph Hartley suggested the use of a logarithmic measure of information in 1928.[6] Claude E. Shannon first used the word bit in his seminal 1948 paper A Mathematical Theory of Communication.[7] He attributed its origin to John W. Tukey, who had written a Bell Labs memo on 9 January 1947 in which he contracted &quot;binary information digit&quot; to simply &quot;bit&quot;. Interestingly, Vannevar Bush had written in 1936 of &quot;bits of information&quot; that could be stored on the punched cards used in the mechanical computers of that time.[8] The first programmable computer, built by Konrad Zuse, used binary notation for numbers.
+
+Physical representation[edit]
+
+A bit can be stored by a digital device or other physical system that exists in either of two possible distinct states. These may be the two stable states of a flip-flop, two positions of an electrical switch, two distinct voltage or current levels allowed by a circuit, two distinct levels of light intensity, two directions of magnetization or polarization, the orientation of reversible double stranded DNA, etc.
+
+Bits can be implemented in several forms. In most modern computing devices, a bit is usually represented by an electrical voltage or current pulse, or by the electrical state of a flip-flop circuit.
+
+For devices using positive logic, a digit value of 1 (or a logical value of true) is represented by a more positive voltage relative to the representation of 0. The specific voltages are different for different logic families and variations are permitted to allow for component aging and noise immunity. For example, in transistor–transistor logic (TTL) and compatible circuits, digit values 0 and 1 at the output of a device are represented by no higher than 0.4 volts and no lower than 2.6 volts, respectively; while TTL inputs are specified to recognize 0.8 volts or below as 0 and 2.2 volts or above as 1.
+
+Transmission and processing[edit]
+
+Bits are transmitted one at a time in serial transmission, and by a multiple number of bits in parallel transmission. A bitwise operation optionally process bits one at a time. Data transfer rates are usually measured in decimal SI multiples of the unit bit per second (bit/s), such as kbit/s.
+
+Storage[edit]
+
+In the earliest non-electronic information processing devices, such as Jacquard's loom or Babbage's Analytical Engine, a bit was often stored as the position of a mechanical lever or gear, or the presence or absence of a hole at a specific point of a paper card or tape. The first electrical devices for discrete logic (such as elevator and traffic light control circuits, telephone switches, and Konrad Zuse's computer) represented bits as the states of electrical relays which could be either &quot;open&quot; or &quot;closed&quot;. When relays were replaced by vacuum tubes, starting in the 1940s, computer builders experimented with a variety of storage methods, such as pressure pulses traveling down a mercury delay line, charges stored on the inside surface of a cathode-ray tube, or opaque spots printed on glass discs by photolithographic techniques.
+
+In the 1950s and 1960s, these methods were largely supplanted by magnetic storage devices such as magnetic core memory, magnetic tapes, drums, and disks, where a bit was represented by the polarity of magnetization of a certain area of a ferromagnetic film, or by a change in polarity from one direction to the other. The same principle was later used in the magnetic bubble memory developed in the 1980s, and is still found in various magnetic strip items such as metro tickets and some credit cards.
+
+In modern semiconductor memory, such as dynamic random-access memory, the two values of a bit may be represented by two levels of electric charge stored in a capacitor. In certain types of programmable logic arrays and read-only memory, a bit may be represented by the presence or absence of a conducting path at a certain point of a circuit. In optical discs, a bit is encoded as the presence or absence of a microscopic pit on a reflective surface. In one-dimensional bar codes, bits are encoded as the thickness of alternating black and white lines.
+
+Unit and symbol[edit]
+
+The bit is not defined in the International System of Units (SI). However, the International Electrotechnical Commission issued standard IEC 60027, which specifies that the symbol for binary digit should be bit, and this should be used in all multiples, such as kbit, for kilobit.[9] However, the lower-case letter b is widely used as well and was recommended by the IEEE 1541 Standard (2002). In contrast, the upper case letter B is the standard and customary symbol for byte.
+
+
+Multiple bits[edit]
+
+Multiple bits may be expressed and represented in several ways. For convenience of representing commonly reoccurring groups of bits in information technology, several units of information have traditionally been used. The most common is the unit byte, coined by Werner Buchholz in June 1956, which historically was used to represent the group of bits used to encode a single character of text (until UTF-8 multibyte encoding took over) in a computer[10][11][12][13][14] and for this reason it was used as the basic addressable element in many computer architectures. The trend in hardware design converged on the most common implementation of using eight bits per byte, as it is widely used today. However, because of the ambiguity of relying on the underlying hardware design, the unit octet was defined to explicitly denote a sequence of eight bits.
+
+Computers usually manipulate bits in groups of a fixed size, conventionally named &quot;words&quot;. Like the byte, the number of bits in a word also varies with the hardware design, and is typically between 8 and 80 bits, or even more in some specialized computers. In the 21st century, retail personal or server computers have a word size of 32 or 64 bits.
+
+The International System of Units defines a series of decimal prefixes for multiples of standardized units which are commonly also used with the bit and the byte. The prefixes kilo (103) through yotta (1024) increment by multiples of 1000, and the corresponding units are the kilobit (kbit) through the yottabit (Ybit).
+
+Information capacity and information compression[edit]
+
+When the information capacity of a storage system or a communication channel is presented in bits or bits per second, this often refers to binary digits, which is a computer hardware capacity to store binary code (0 or 1, up or down, current or not, etc.). Information capacity of a storage system is only an upper bound to the actual quantity of information stored therein. If the two possible values of one bit of storage are not equally likely, that bit of storage will contain less than one bit of information. Indeed, if the value is completely predictable, then the reading of that value will provide no information at all (zero entropic bits, because no resolution of uncertainty and therefore no information). If a computer file that uses n bits of storage contains only m &lt; n bits of information, then that information can in principle be encoded in about m bits, at least on the average. This principle is the basis of data compression technology. Using an analogy, the hardware binary digits refer to the amount of storage space available (like the number of buckets available to store things), and the information content the filling, which comes in different levels of granularity (fine or coarse, that is, compressed or uncompressed information). When the granularity is finer (when information is more compressed), the same bucket can hold more.
+
+For example, it is estimated that the combined technological capacity of the world to store information provides 1,300 exabytes of hardware digits in 2007. However, when this storage space is filled and the corresponding content is optimally compressed, this only represents 295 exabytes of information.[15] When optimally compressed, the resulting carrying capacity approaches Shannon information or information entropy.
+
+Bit-based computing[edit]
+
+Certain bitwise computer processor instructions (such as bit set) operate at the level of manipulating bits rather than manipulating data interpreted as an aggregate of bits.
+
+In the 1980s, when bitmapped computer displays became popular, some computers provided specialized bit block transfer (&quot;bitblt&quot; or &quot;blit&quot;) instructions to set or copy the bits that corresponded to a given rectangular area on the screen.
+
+In most computers and programming languages, when a bit within a group of bits, such as a byte or word, is referred to, it is usually specified by a number from 0 upwards corresponding to its position within the byte or word. However, 0 can refer to either the most or least significant bit depending on the context.
+
+Other information units[edit]
+
+Main article: Units of information
+
+Other units of information, sometimes used in information theory, include the natural digit also called a nat or nit and defined as log2 e (≈ 1.443) bits, where e is the base of the natural logarithms; and the dit, ban, or hartley, defined as log2 10 (≈ 3.322) bits.[6] This value, slightly less than 10/3, may be understood because 103 = 1000 ≈ 1024 = 210: three decimal digits are slightly less information than ten binary digits, so one decimal digit is slightly less than 10/3 binary digits. Conversely, one bit of information corresponds to about ln 2 (≈ 0.693) nats, or log10 2 (≈ 0.301) hartleys. As with the inverse ratio, this value, approximately 3/10, but slightly more, corresponds to the fact that 210 = 1024 ~ 1000 = 103: ten binary digits are slightly more information than three decimal digits, so one binary digit is slightly more than 3/10 decimal digits. Some authors also define a binit as an arbitrary information unit equivalent to some fixed but unspecified number of bits.[16]
+
+</pre>
+</div>
 <div tags="" title="broadcast routing">
 <pre></pre>
+</div>
+<div tags="" title="byte">
+<pre>The byte (/ˈbaɪt/) is a unit of digital information that most commonly consists of eight bits. Historically, the byte was the number of bits used to encode a single character of text in a computer[1][2] and for this reason it is the smallest addressable unit of memory in many computer architectures. The size of the byte has historically been hardware dependent and no definitive standards existed that mandated the size – byte-sizes from 1[3] to 48 bits[4] are known to have been used in the past. The modern de-facto standard of eight bits, as documented in ISO/IEC 2382-1:1993, is a convenient power of two permitting the values 0 through 255 for one byte.[5] The international standard IEC 80000-13 codified this common meaning. Many types of applications use information representable in eight or fewer bits and processor designers optimize for this common usage. The popularity of major commercial computing architectures has aided in the ubiquitous acceptance of the eight-bit size.[6]
+
+The unit symbol for the byte was designated as the upper-case letter B by the International Electrotechnical Commission (IEC) and Institute of Electrical and Electronics Engineers (IEEE)[7] in contrast to the bit, whose IEEE symbol is a lower-case b. Internationally, the unit octet, symbol o, explicitly denotes a sequence of eight bits, eliminating the ambiguity of the byte.[8][9]
+
+History[edit]
+
+The term byte was coined by Werner Buchholz in June 1956,[3][10][11][a] during the early design phase for the IBM Stretch[12][13][1][10][11][14][15] computer, which had addressing to the bit and variable field length (VFL) instructions with a byte size encoded in the instruction.[10] It is a deliberate respelling of bite to avoid accidental mutation to bit.[1][10][16]
+
+Another origin of byte for bit groups smaller than a machine's word size (and in particular groups of four bits) is on record by Louis G. Dooley, who claimed he coined the term while working with Jules Schwartz and Dick Beeler on an air defense system called SAGE at MIT Lincoln Laboratory in ca. 1956/1957, which was jointly developed by Rand, MIT, and IBM.[17][18] Later on, Schwartz's language JOVIAL actually used the term, but he recalled vaguely that it was derived from AN/FSQ-31.[19][18]
+
+Early computers used a variety of four-bit binary coded decimal (BCD) representations and the six-bit codes for printable graphic patterns common in the U.S. Army (FIELDATA) and Navy. These representations included alphanumeric characters and special graphical symbols. These sets were expanded in 1963 to seven bits of coding, called the American Standard Code for Information Interchange (ASCII) as the Federal Information Processing Standard, which replaced the incompatible teleprinter codes in use by different branches of the U.S. government and universities during the 1960s. ASCII included the distinction of upper- and lowercase alphabets and a set of control characters to facilitate the transmission of written language as well as printing device functions, such as page advance and line feed, and the physical or logical control of data flow over the transmission media.[15] During the early 1960s, while also active in ASCII standardization, IBM simultaneously introduced in its product line of System/360 the eight-bit Extended Binary Coded Decimal Interchange Code (EBCDIC), an expansion of their six-bit binary-coded decimal (BCDIC) representation used in earlier card punches.[20] The prominence of the System/360 led to the ubiquitous adoption of the eight-bit storage size,[15][13][10] while in detail the EBCDIC and ASCII encoding schemes are different.
+
+In the early 1960s, AT&amp;T introduced digital telephony first on long-distance trunk lines. These used the eight-bit µ-law encoding. This large investment promised to reduce transmission costs for eight-bit data.
+
+The development of eight-bit microprocessors in the 1970s popularized this storage size. Microprocessors such as the Intel 8008, the direct predecessor of the 8080 and the 8086, used in early personal computers, could also perform a small number of operations on the four-bit pairs in a byte, such as the decimal-add-adjust (DAA) instruction. A four-bit quantity is often called a nibble, also nybble, which is conveniently represented by a single hexadecimal digit.
+
+The term octet is used to unambiguously specify a size of eight bits.[15][9] It is used extensively in protocol definitions.
+
+Historically, the term octad or octade was used to denote eight bits as well at least in Western Europe;[21][22] however, this usage is no longer common. The exact origin of the term is unclear, but it can be found in British, Dutch, and German sources of the 1960s and 1970s, and throughout the documentation of Philips mainframe computers.
+
+Unit symbol
+
+The unit symbol for the byte is specified in IEC 80000-13, IEEE 1541 and the Metric Interchange Format[7] as the upper-case character B. In contrast, IEEE 1541 specifies the lower case character b as the symbol for the bit, however, IEC 80000-13 and Metric-Interchange-Format specify the symbol as bit, providing disambiguation from B for byte.
+
+In the International System of Quantities (ISQ), B is the symbol of the bel, a unit of logarithmic power ratios named after Alexander Graham Bell, creating a conflict with the IEC specification. However, little danger of confusion exists, because the bel is a rarely used unit. It is used primarily in its decadic fraction, the decibel (dB), for signal strength and sound pressure level measurements, while a unit for one tenth of a byte, the decibyte, and other fractions, are only used in derived units, such as transmission rates.
+
+The lowercase letter o for octet is defined as the symbol for octet in IEC 80000-13 and is commonly used in languages such as French[23] and Romanian, and is also combined with metric prefixes for multiples, for example ko and Mo.
+
+The usage of the term octad(e) for eight bits is no longer common.[21][22]
+
+Unit multiples
+
+Despite standardization efforts, ambiguity still exists in the meanings of the SI (or metric) prefixes used with the unit byte, especially concerning the prefixes kilo (k or K), mega (M), and giga (G). Computer memory has a binary architecture in which multiples are expressed in powers of 2. In some fields of the software and computer hardware industries a binary prefix is used for bytes and bits, while producers of computer storage devices practice adherence to decimal SI multiples. For example, a computer disk drive capacity of 100 gigabytes is specified when the disk contains 100 billion bytes (93 gibibytes) of storage space.
+
+While the numerical difference between the decimal and binary interpretations is relatively small for the prefixes kilo and mega, it grows to over 20% for prefix yotta. The linear-log graph at right illustrates the difference versus storage size up to an exabyte.
+
+Common uses[edit]
+
+Many programming languages defined the data type byte.
+
+The C and C++ programming languages define byte as an &quot;addressable unit of data storage large enough to hold any member of the basic character set of the execution environment&quot; (clause 3.6 of the C standard). The C standard requires that the integral data type unsigned char must hold at least 256 different values, and is represented by at least eight bits (clause 5.2.4.2.1). Various implementations of C and C++ reserve 8, 9, 16, 32, or 36 bits for the storage of a byte.[24][25][b] In addition, the C and C++ standards require that there are no &quot;gaps&quot; between two bytes. This means every bit in memory is part of a byte.[26]
+
+Java's primitive byte data type is always defined as consisting of 8 bits and being a signed data type, holding values from −128 to 127.
+
+.NET programming languages, such as C#, define both an unsigned byte and a signed sbyte, holding values from 0 to 255, and −128 to 127, respectively.
+
+In data transmission systems, the byte is defined as a contiguous sequence of bits in a serial data stream representing the smallest distinguished unit of data. A transmission unit might include start bits, stop bits, or parity bits, and thus could vary from 7 to 12 bits to contain a single 7-bit ASCII code.[27]
+</pre>
+</div>
+<div tags="" title="CAM - Content-adressable Memory">
+<pre>Content-addressable memory (CAM) is a special type of computer memory used in certain very-high-speed searching applications. It is also known as associative memory, associative storage, or associative array, although the last term is more often used for a programming data structure.[1] It compares input search data (tag) against a table of stored data, and returns the address of matching data (or in the case of associative memory, the matching data).[2] Several custom computers, like the Goodyear STARAN, were built to implement CAM, and were designated associative computers.
+
+Hardware associative array[edit]
+
+Unlike standard computer memory (random access memory or RAM) in which the user supplies a memory address and the RAM returns the data word stored at that address, a CAM is designed such that the user supplies a data word and the CAM searches its entire memory to see if that data word is stored anywhere in it. If the data word is found, the CAM returns a list of one or more storage addresses where the word was found (and in some architectures, it also returns the contents of that storage address, or other associated pieces of data). Thus, a CAM is the hardware embodiment of what in software terms would be called an associative array. The data word recognition unit was proposed by Dudley Allen Buck in 1955.[3]
+
+Standards for content-addressable memories[edit]
+
+A major interface definition for CAMs and other network search engines (NSEs) was specified in an interoperability agreement called the Look-Aside Interface (LA-1 and LA-1B) developed by the Network Processing Forum, which later merged with the Optical Internetworking Forum (OIF). Numerous devices have been produced by Integrated Device Technology, Cypress Semiconductor, IBM, Broadcom and others to the LA interface agreement. On December 11, 2007, the OIF published the serial lookaside (SLA) interface agreement.
+
+Semiconductor implementations[edit]
+
+Because a CAM is designed to search its entire memory in a single operation, it is much faster than RAM in virtually all search applications. There are cost disadvantages to CAM however. Unlike a RAM chip, which has simple storage cells, each individual memory bit in a fully parallel CAM must have its own associated comparison circuit to detect a match between the stored bit and the input bit. Additionally, match outputs from each cell in the data word must be combined to yield a complete data word match signal. The additional circuitry increases the physical size of the CAM chip which increases manufacturing cost. The extra circuitry also increases power dissipation since every comparison circuit is active on every clock cycle. Consequently, CAM is only used in specialized applications where searching speed cannot be accomplished using a less costly method. One successful early implementation was a General Purpose Associative Processor IC and System.[4]
+
+Alternative implementations[edit]
+
+To achieve a different balance between speed, memory size and cost, some implementations emulate the function of CAM by using standard tree search or hashing designs in hardware, using hardware tricks like replication or pipelining to speed up effective performance. These designs are often used in routers.[citation needed]
+
+An alternative approach to implementation is based on Superimposed Code Words or Field Encoded Words which are used for more efficient database operations, information retrieval and logic programming, with hardware implementations based on both RAM and head-monitoring disk technology.[5][6]
+
+Ternary CAMs[edit]
+
+Binary CAM is the simplest type of CAM which uses data search words consisting entirely of 1s and 0s. Ternary CAM (TCAM)[7] allows a third matching state of &quot;X&quot; or &quot;don't care&quot; for one or more bits in the stored dataword, thus adding flexibility to the search. For example, a ternary CAM might have a stored word of &quot;10XX0&quot; which will match any of the four search words &quot;10000&quot;, &quot;10010&quot;, &quot;10100&quot;, or &quot;10110&quot;. The added search flexibility comes at an additional cost over binary CAM as the internal memory cell must now encode three possible states instead of the two of binary CAM. This additional state is typically implemented by adding a mask bit (&quot;care&quot; or &quot;don't care&quot; bit) to every memory cell.
+
+Example applications[edit]
+
+Content-addressable memory is often used in computer networking devices. For example, when a network switch receives a data frame from one of its ports, it updates an internal table with the frame's source MAC address and the port it was received on. It then looks up the destination MAC address in the table to determine what port the frame needs to be forwarded to, and sends it out on that port. The MAC address table is usually implemented with a binary CAM so the destination port can be found very quickly, reducing the switch's latency.
+
+Ternary CAMs are often used in network routers, where each address has two parts: the network prefix, which can vary in size depending on the subnet configuration, and the host address, which occupies the remaining bits. Each subnet has a network mask that specifies which bits of the address are the network prefix and which bits are the host address. Routing is done by consulting a routing table maintained by the router which contains each known destination network prefix, the associated network mask, and the information needed to route packets to that destination. Without CAM, the router compares the destination address of the packet to be routed with each entry in the routing table, performing a logical AND with the network mask and comparing it with the network prefix. If they are equal, the corresponding routing information is used to forward the packet. Using a ternary CAM for the routing table makes the lookup process very efficient. The addresses are stored using &quot;don't care&quot; for the host part of the address, so looking up the destination address in the CAM immediately retrieves the correct routing entry; both the masking and comparison are done by the CAM hardware. This works if (a) the entries are stored in order of decreasing network mask length, and (b) the hardware returns only the first matching entry; thus, the match with the longest network mask (longest prefix match) is used.[8]
+
+Other CAM applications include:
+CPU fully associative cache controllers and translation lookaside buffers
+Database engines
+Data compression hardware
+Artificial neural networks
+Intrusion Prevention System
+</pre>
 </div>
 <div tags="" title="CIDR">
 <pre>''CIDR (Classless Inter-Domain Routing, sometimes called supernetting) is a way to allow more flexible allocation of Internet Protocol (IP) addresses than was possible with the original system of IP address classes. As a result, the number of available Internet addresses was greatly increased, which along with widespread use of network address translation (NAT), has significantly extended the useful life of IPv4.
@@ -9043,6 +9221,16 @@ CIDR is now the routing system used by virtually all gateway routers on the Inte
 </div>
 <div tags="" title="DSL - Digital Subscriber Line">
 <pre></pre>
+</div>
+<div tags="" title="dual stack network">
+<pre>A dual stack network is a network in which all of the nodes are both IPv4 and IPv6 enabled. This is especially important at the router, as the router is typically the first node on a given network to receive traffic from outside of the network. 
+
+ Many experts believe that network infrastructure will shift from IPv4 to IPv6 in order to provide more adress space and serve growing global connecitivity. Dual stack networks are one of the many IPv4 to IPv6 migration strategies that have been presented in recent years. 
+
+A dual stack network involves nodes that are capable of processing IPv4 and IPv6 traffic simultaneously. When a node within a dual stack network receives traffic, it is programmed to prefer IPv6 over IPv4 traffic. In the event that the traffic it receives is solely IPv4, then the dual stack node is capable of processing it as well. 
+
+Dual stack networking is one of several solutions for migrating from IPv4 to IPv6, but it is also one of the most expensive.
+</pre>
 </div>
 <div tags="" title="ECN - Explicit Congestion Notification">
 <pre></pre>
@@ -9384,6 +9572,9 @@ Multihoming with multiple addresses has been implemented for IPv6.[6][10] For ou
 </pre>
 </div>
 <div tags="" title="named pipe">
+<pre></pre>
+</div>
+<div tags="" title="NAT - Network Address Translation">
 <pre></pre>
 </div>
 <div tags="" title="NDP - Neighbour Discovery Protocol">
