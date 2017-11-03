@@ -120,6 +120,8 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="http://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/config/DownloadSaver/AutoSave</li>
+
 <li>$:/config/EditorToolbarButtons/Visibility/$:/core/ui/EditorToolbar/heading-4</li>
 
 <li>$:/config/EditorToolbarButtons/Visibility/$:/core/ui/EditorToolbar/heading-5</li>
@@ -194,6 +196,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/SampleReveal1</li>
+
 <li>$:/state/showeditpreview</li>
 
 <li>$:/state/sidebar</li>
@@ -205,6 +209,8 @@ Error message and password prompt
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab--1963855381</li>
+
+<li>$:/state/tab-2065006209</li>
 
 <li>$:/state/tab--2112689675</li>
 
@@ -258,9 +264,7 @@ Error message and password prompt
 
 <li>clients</li>
 
-<li>cross-bar switch</li>
-
-<li>crossbar switching</li>
+<li>communication link</li>
 
 <li>datagram</li>
 
@@ -287,10 +291,6 @@ Error message and password prompt
 <li>FTP - File Transfer Protocol</li>
 
 <li>geocast routing</li>
-
-<li>head_of_line_blocking.png</li>
-
-<li>head-of-line blocking</li>
 
 <li>HTTP - Hypertext Transfer Protocol</li>
 
@@ -380,6 +380,8 @@ Error message and password prompt
 
 <li>packet header</li>
 
+<li>packet switching</li>
+
 <li>POP - Post Office Protocol</li>
 
 <li>PPP - Point-to-Point Protocol</li>
@@ -438,6 +440,8 @@ Error message and password prompt
 
 <li>TLS - Transport Layer Security</li>
 
+<li>transmission rate</li>
+
 <li>transport layer</li>
 
 <li>trie.gif</li>
@@ -476,6 +480,9 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div title="$:/config/DownloadSaver/AutoSave">
+<pre>yes</pre>
+</div>
 <div title="$:/config/EditorToolbarButtons/Visibility/$:/core/ui/EditorToolbar/heading-4">
 <pre>show</pre>
 </div>
@@ -8769,7 +8776,7 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[head_of_line_blocking.png]]</pre>
+# [[bus2.png]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -8782,6 +8789,9 @@ Error message and password prompt
 </div>
 <div created="20171029195108803" modified="20171029195111600" title="$:/SiteTitle">
 <pre>The Internet</pre>
+</div>
+<div title="$:/state/SampleReveal1">
+<pre>hide</pre>
 </div>
 <div title="$:/state/showeditpreview">
 <pre>no</pre>
@@ -8796,10 +8806,13 @@ Error message and password prompt
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
 <div title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
+</div>
+<div title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/TiddlySpot</pre>
 </div>
 <div title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
@@ -8813,7 +8826,7 @@ Error message and password prompt
 <div title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div list="[[head-of-line blocking]]" title="$:/StoryList">
+<div list="AS" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8829,7 +8842,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file://dc01/Home/client27/Downloads/index.html&quot;
+            &quot;text&quot;: &quot;file://dc01/Home/client13/Downloads/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -8849,7 +8862,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/Home/client27/Downloads/index.html&quot;
+            &quot;text&quot;: &quot;/Home/client13/Downloads/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -8990,23 +9003,38 @@ Error message and password prompt
 <pre></pre>
 </div>
 <div tags="" title="AS">
-<pre>''An autonomous system (AS) is a heterogenous network with subnetworks or a collection of networks (collection of routers) whose prefixes and routing policies are managed by a single entity or organization.''
+<pre>* Autonomous System
 
-''This could be a network service provider, a large company, a university, a division of a company, or a group of companies.''
+* routers (networks) under the same routing policy/authority for routing outside the AS, with a common IP prefix (ASN)
 
-''Each subnetwork is assigned a globally unique 16 digit identification number (known as the AS number or ASN) by the Internet Assigned Numbers Authority (IANA).''
+* 16 digit identification number assigned for each AS/subnetworks, by IANA
 
---------------------------------
+* inter-AS routing: routing between ASs
 
-Autonomous systems were introduced to regulate organizations such as Internet service providers (ISP), educational institutions and government bodies. These systems are made up of many different networks but are operated under the umbrella of a single entity for easy management. Large enterprises tend to have large network infrastructures with many smaller networks, dispersed geographically but connected using a similar operating environment. 
+* intra AS Routing: routers within an AS use IGP (Interior Gateway Protocol) to route within the AS, invisible to those outside it
+----------------------------------
 
-The AS represents a connected group of one or more blocks of IP addresses, called IP prefixes, that have been assigned to that organization and provides a single routing policy to systems outside the AS.
+
+&lt;$button set=&quot;$:/state/SampleReveal1&quot; setTo=&quot;show&quot;&gt;Show&lt;/$button&gt;
+&lt;$button set=&quot;$:/state/SampleReveal1&quot; setTo=&quot;hide&quot;&gt;Hide&lt;/$button&gt;
+
+&lt;$reveal type=&quot;match&quot; state=&quot;$:/state/SampleReveal1&quot; text=&quot;show&quot;&gt;
+
+
+An autonomous system (AS) is a heterogenous network with subnetworks or a collection of networks (collection of routers) whose prefixes and routing policies are managed by a single entity or organization.
+This could be a network service provider, a large company, a university, a division of a company, or a group of companies.
+
+Each subnetwork is assigned a globally unique 16 digit identification number (known as the AS number or ASN) by the Internet Assigned Numbers Authority (IANA).
 
 Autonomous Systems create a two-level hierarchy for routing in the Internet. Routing between Autonomous Systems (inter-AS routing) is external to the AS and allows one AS to send traffic to another AS.
 
-Note that most organizations do not interconnect via autonomous systems but simply connect to a single ISP, which may be an autonomous system. 
+Routers within an AS use an Interior Gateway Protocol (IGP), which handles routing between nodes inside the AS.
 
-Routers within an AS use an Interior Gateway Protocol (IGP), which handles routing between nodes inside the AS. 
+Autonomous systems were introduced to regulate organizations such as Internet service providers (ISP), educational institutions and government bodies. These systems are made up of many different networks but are operated under the umbrella of a single entity for easy management. Large enterprises tend to have large network infrastructures with many smaller networks, dispersed geographically but connected using a similar operating environment.
+
+The AS represents a connected group of one or more blocks of IP addresses, called IP prefixes, that have been assigned to that organization and provides a single routing policy to systems outside the AS.
+
+Note that most organizations do not interconnect via autonomous systems but simply connect to a single ISP, which may be an autonomous system. 
 
 Common interior gateway protocols include RIP, OSPF, IS-IS, EIGRP, as well as some proprietary protocols such as IGRP.
 
@@ -9016,7 +9044,11 @@ To get traffic from a host in one AS to a host in another AS, the autonomous sys
 
 Most ASes do not share a direct link with each other, in which case data traffic may be routed through the networks of other ASes that agree to carry the traffic. 
 
-Autonomous systems numbered one to 64511 are available by IANA/ARIN (IANA/American Registry for Internet Numbers) for global use. The 64512 to 65535 series is reserved for private and reserved purposes. </pre>
+&lt;/$reveal&gt;
+
+
+
+</pre>
 </div>
 <div tags="" title="ASN">
 <pre>---------------
@@ -9326,19 +9358,75 @@ CIDR is now the routing system used by virtually all gateway routers on the Inte
 <div tags="" title="clients">
 <pre>* mail clients</pre>
 </div>
-<div tags="" title="cross-bar switch">
-<pre>
-In a network, a cross-bar switch is a device that is capable of channeling data between any two devices that are attached to it up to its maximum number of ports. The paths set up between devices can be fixed for some duration or changed when desired and each device-to-device path (going through the switch) is usually fixed for some period.
+<div tags="" title="communication link">
+<pre>In telecommunications a link is a communications channel that connects two or more devices. This link may be an actual physical link or it may be a logical link that uses one or more actual physical links.
 
-Cross-bar topology can be contrasted with bus topology, an arrangement in which there is only one path that all devices share. Traditionally, computers have been connected to storage devices with a large bus. A major advantage of cross-bar switching is that, as the traffic between any two devices increases, it does not affect traffic between other devices. In addition to offering more flexibility, a cross-bar switch environment offers greater scalability than a bus environment.
+A telecommunications link is generally one of several types of information transmission paths such as those provided by communication satellites, terrestrial radio communications infrastructure and computer networks to connect two or more points.
 
-In an IBM mainframe environment, the ESCON director is an example of a cross-bar switch.
+The term link is widely used in computer networking (see data link) to refer to the communications facilities that connect nodes of a network.[1][a] When the link is a logical link the type of physical link should always be specified (e.g., data link, uplink, downlink, fiber optic link, point-to-point link, etc.)
+ 
+Types[edit]
+
+Point-to-point[edit]
+
+Main article: Point-to-point (telecommunications)
+
+A point-to-point link is a dedicated link that connects exactly two communication facilities (e.g., two nodes of a network, an intercom station at an entryway with a single internal intercom station, a radio path between two points, etc.).
+
+Broadcast[edit]
+
+Broadcast links connect two or more nodes and support broadcast transmission, where one node can transmit so that all other nodes can receive the same transmission. Ethernet is an example.
+
+Multipoint[edit]
+
+Also known as a multidrop link, a multipoint link is a link that connects two or more nodes. Also known as general topology networks, these include ATM and Frame Relay links, as well as X.25 networks when used as links for a network layer protocol like IP.
+
+Unlike broadcast links, there is no mechanism to efficiently send a single message to all other nodes without copying and retransmitting the message.
+
+Point-to-multipoint[edit]
+
+Main article: Point-to-multipoint communication (telecommunications)
+
+A point-to-multipoint link (or simply a multipoint) is a specific type of multipoint link which consists of a central connection endpoint (CE) that is connected to multiple peripheral CEs. Any transmission of data that originates from the central CE is received by all of the peripheral CEs while any transmission of data that originates from any of the peripheral CEs is only received by the central CE.
+
+Private and public — accessibility and ownership[edit]
+
+Links are often referred to by terms which refer to the ownership and / or accessibility of the link.
+A private link is a link that is either owned by a specific entity or a link that is only accessible by a specific entity.
+A public link is a link that uses the public switched telephone network or other public utility or entity to provide the link and which may also be accessible by anyone.
+
+Direction[edit]
+
+
+ 
+
+
+
+Feeder links, here: uplink / downlink
+
+Uplink[edit]
+Pertaining to radiocommunication service, an uplink (UL or U/L) is the portion of a feeder link used for the transmission of signals from an earth station to a space radio station, space radio system or high altitude platform station.
+Pertaining to GSM and cellular networks, the radio uplink is the transmission path from the mobile station (cell phone) to a base station (cell site). Traffic and signalling flows within the BSS and NSS may also be identified as uplink and downlink.
+Pertaining to computer networks, an uplink is a connection from data communications equipment toward the network core. This is also known as an upstream connection.
+
+Downlink[edit]
+Pertaining to radiocommunication service, a downlink (DL or D/L) is the portion of a feeder link used for the transmission of signals from a space radio station, space radio system or high altitude platform station to an earth station.
+In the context of satellite communications, a downlink (DL) is the link from a satellite to a ground station.
+Pertaining to cellular networks, the radio downlink is the transmission path from a cell site to the cell phone. Traffic and signalling flows within the base station subsystem (BSS) and network switching subsystem (NSS) may also be identified as uplink and downlink.
+Pertaining to computer networks, a downlink is a connection from data communications equipment towards data terminal equipment. This is also known as a downstream connection.
+
+Forward link[edit]
+
+A forward link is the link from a fixed location (e.g., a base station) to a mobile user. If the link includes a communications relay satellite, the forward link will consist of both an uplink (base station to satellite) and a downlink (satellite to mobile user).[2]
+
+Reverse link[edit]
+
+See also: Backhaul (telecommunications) and Return channel
+
+The reverse link (sometimes called a return channel) is the link from a mobile user to a fixed base station.
+
+If the link includes a communications relay satellite, the reverse link will consist of both an uplink (mobile station to satellite) and a downlink (satellite to base station) which together constitute a half hop.
 </pre>
-</div>
-<div tags="" title="crossbar switching">
-<pre>* every input port has a connection to every output port
-* during each timeslot., each input connected to zero or one outputs
-* advantage: parallelism, but need scheduling algorithm</pre>
 </div>
 <div tags="" title="datagram">
 <pre></pre>
@@ -9448,37 +9536,6 @@ CAM tables are often the target of layer 2 network attacks in a local area netwo
 </div>
 <div tags="" title="geocast routing">
 <pre></pre>
-</div>
-<div title="head_of_line_blocking.png" type="image/png">
-<pre>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</pre>
-</div>
-<div tags="" title="head-of-line blocking">
-<pre>Head-of-line blocking (HOL blocking) in computer networking is a performance-limiting phenomenon that occurs when a line of packets is held up by the first packet. Examples include input buffered network switches, out-of-order delivery and multiple requests in HTTP pipelining.
-
-Switches
-
-A switch may be composed of buffered input ports, a switch fabric and buffered output ports. If first-in first-out (FIFO) input buffers are used, only the oldest packet is available for forwarding. More recent arrivals cannot be forwarded if the oldest packet cannot be forwarded because its destination output is busy. The output may be busy if:
-There is output contention (see diagram)
-Or most commonly when the output buffer is full - congestion (for example the combined rate of multiple inputs exceeds the output rate)
-
-Without HOL blocking, the new arrivals could potentially be forwarded around the stuck oldest packet to their respective destinations. The phenomenon can have severe performance-degrading effects in input-buffered systems.
-
-This phenomenon limits the throughput of switches. For FIFO input buffers, a simple model of fixed-sized cells to uniformly distributed destinations, causes the throughput to be limited to 58.6% of the total as the number of links becomes large.[1]
-
-One way to overcome this limitation is by using virtual output queues.[2]
-
-Only switches with input buffering can suffer HOL blocking. With sufficient internal bandwidth, input buffering is unnecessary; all buffering is handled at outputs and HOL blocking is avoided. This no-input-buffering architecture is common in small to medium-sized ethernet switches.
-
-Out-of-order delivery[edit]
-
-Out-of-order delivery occurs when sequenced packets arrive out of order. This may happen due to different paths taken by the packets or from packets being dropped and resent. HOL blocking can significantly increase packet reordering.[3][4]
-
-Reliably broadcasting messages across a lossy network among a large number of peers is a difficult problem. While atomic broadcast algorithms solve the single point of failure problem of centralized servers, those algorithms introduce a head-of-line blocking problem. The Bimodal Multicast algorithm, a randomized algorithm that uses a gossip protocol, avoids head-of-line blocking by allowing some messages to be received out-of-order.[5]
-
-Head-of-line blocking example: The 1st and 3rd input flows are competing to send packets to the same output interface. In this case if the switching fabric decides to transfer the packet from the 3rd input flow, the 1st input flow cannot be processed in the same clock cycle. Note that the 1st input flow is blocking a packet for output interface 3, which is available for processing.
-
-[img[head_of_line_blocking.png]]
-</pre>
 </div>
 <div tags="" title="HTTP - Hypertext Transfer Protocol">
 <pre></pre>
@@ -9841,6 +9898,386 @@ The header's format is specified in the Internet protocol. It normally contains 
 Among the contents of the header are the version of IP (which is always set to 4, because IPv4 is being used), the sender's IP address, the intended receiver's IP address, the number of packets the message has been broken into, the identification number of the particular packet, the protocol (e.g. 1 for ICMP, 2 for IGMP, 6 for TCP and 17 for UDP) used, the packet length (on networks that have variable length packets), the time to live (i.e., the number of links or hops that the packet can be routed before being allowed to expire) and synchronization data (several bits that help the packet match up to the network). 
 </pre>
 </div>
+<div tags="" title="packet switching">
+<pre>Packet switching is a method of grouping data transmitted over a digital network into packets which are composed of a header and a payload. Data in the header is used by networking hardware to direct the packet to its destination where the payload is extracted and used by application software. Packet switching is the primary basis for data communications in computer networks worldwide.
+
+In the early 1960s, American computer scientist Paul Baran developed the concept Distributed Adaptive Message Block Switching with the goal to provide a fault-tolerant, efficient routing method for telecommunication messages as part of a research program at the RAND Corporation, funded by the US Department of Defense.[1] This concept contrasted and contradicted then-established principles of pre-allocation of network bandwidth, largely fortified by the development of telecommunications in the Bell System. The new concept found little resonance among network implementers until the independent work of British computer scientist Donald Davies at the National Physical Laboratory (United Kingdom) in 1965. Davies is credited with coining the modern name packet switching and inspiring numerous packet switching networks in the decade following, including the incorporation of the concept in the early ARPANET in the United States.[2][3]
+
+Concept[edit]
+
+
+ 
+
+
+ An animation demonstrating data packet switching across a network
+A simple definition of packet switching is:
+
+
+The routing and transferring of data by means of addressed packets so that a channel is occupied during the transmission of the packet only, and upon completion of the transmission the channel is made available for the transfer of other traffic[4][5]
+
+Packet switching features delivery of variable bit rate data streams, realized as sequences of packets, over a computer network which allocates transmission resources as needed using statistical multiplexing or dynamic bandwidth allocation techniques. As they traverse network nodes, such as switches and routers, packets are received, buffered, queued, and transmitted (stored and forwarded), resulting in variable latency and throughput depending on the link capacity and the traffic load on the network.
+
+Packet switching contrasts with another principal networking paradigm, circuit switching, a method which pre-allocates dedicated network bandwidth specifically for each communication session, each having a constant bit rate and latency between nodes. In cases of billable services, such as cellular communication services, circuit switching is characterized by a fee per unit of connection time, even when no data is transferred, while packet switching may be characterized by a fee per unit of information transmitted, such as characters, packets, or messages.
+
+Packet mode communication may be implemented with or without intermediate forwarding nodes (packet switches or routers). Packets are normally forwarded by intermediate network nodes asynchronously using first-in, first-out buffering, but may be forwarded according to some scheduling discipline for fair queuing, traffic shaping, or for differentiated or guaranteed quality of service, such as weighted fair queuing or leaky bucket. In case of a shared physical medium (such as radio or 10BASE5), the packets may be delivered according to a multiple access scheme.
+
+History[edit]
+
+Further information: History of the Internet
+
+In the late 1950s, the US Air Force established a wide area network for the Semi-Automatic Ground Environment (SAGE) radar defense system. They sought a system that might survive a nuclear attack to enable a response, thus diminishing the attractiveness of the first strike advantage by enemies.[6]
+
+Leonard Kleinrock conducted early research in queueing theory and published a book in the related field of digital message switching (without packets) in 1961.[7]
+
+The concept of switching small blocks of data was first explored independently by Paul Baran at the RAND Corporation starting in the late 1950s in the US and subsequently by Donald Davies at the National Physical Laboratory (NPL) in the UK.[8][9][10]
+
+Baran developed the concept of distributed adaptive message block switching during his research at the RAND Corporation for the US Air Force into communications networks that could survive nuclear wars.[11] First presented to the Air Force in the summer of 1961 as briefing B-265,[6] later published as RAND report P-2626 in 1962,[12] and finally in report RM 3420 in 1964.[13] Report P-2626 described a general architecture for a large-scale, distributed, survivable communications network. The work focuses on three key ideas: use of a decentralized network with multiple paths between any two points, dividing user messages into message blocks, and delivery of these messages by store and forward switching.
+
+Donald Davies at the National Physical Laboratory (UK) developed a similar message routing concept in 1965. He called it packet switching, a more accessible name than Baran's terminology, and proposed building a nationwide network in the UK.[14] He gave a talk on the proposal in 1966, after which a person from the Ministry of Defence (MoD) told him about Baran's work. A member of Davies' team (Roger Scantlebury) met Lawrence Roberts at the 1967 ACM Symposium on Operating System Principles and suggested it for use in the ARPANET.[15] Davies had chosen some of the same parameters for his original network design as did Baran, such as a packet size of 1024 bits. In 1966, Davies proposed that a network should be built at the laboratory to serve the needs of NPL and prove the feasibility of packet switching. After a pilot experiment in 1967,[16][17] the NPL Data Communications Network entered service in 1969.[18]
+
+Building on his earlier work on queueing theory, Leonard Kleinrock subsequently carried out theoretical work to model the performance of packet-switched networks, which underpinned the development of the ARPANET. The NPL team also carried out simulation work on packet networks.[18]
+
+In 1974, Vint Cerf and Bob Kahn published the specifications for Transmission Control Protocol (TCP), an internetworking protocol for sharing resources using packet-switching among the nodes[19] (this monolithic protocol was later layered as TCP atop the Internet Protocol, or IP).
+
+The French CYCLADES network, designed by Louis Pouzin in the early 1970s, was the first to make the hosts responsible for the reliable delivery of data, rather than this being a centralized service of the network itself.
+
+Connectionless and connection-oriented modes[edit]
+
+Packet switching may be classified into connectionless packet switching, also known as datagram switching, and connection-oriented packet switching, also known as virtual circuit switching.
+
+Examples of connectionless protocols are Ethernet, Internet Protocol (IP), and the User Datagram Protocol (UDP). Connection-oriented protocols include X.25, Frame Relay, Multiprotocol Label Switching (MPLS), and the Transmission Control Protocol (TCP).
+
+In connectionless mode each packet includes complete addressing information. The packets are routed individually, sometimes resulting in different paths and out-of-order delivery. Each packet is labeled with a destination address, source address, and port numbers. It may also be labeled with the sequence number of the packet. This precludes the need for a dedicated path to help the packet find its way to its destination, but means that much more information is needed in the packet header, which is therefore larger, and this information needs to be looked up in power-hungry content-addressable memory. Each packet is dispatched and may go via different routes; potentially, the system has to do as much work for every packet as the connection-oriented system has to do in connection set-up, but with less information as to the application's requirements. At the destination, the original message/data is reassembled in the correct order, based on the packet sequence number. Thus a virtual connection, also known as a virtual circuit or byte stream is provided to the end-user by a transport layer protocol, although intermediate network nodes only provides a connectionless network layer service.
+
+Connection-oriented transmission requires a setup phase in each involved node before any packet is transferred to establish the parameters of communication. The packets include a connection identifier rather than address information and are negotiated between endpoints so that they are delivered in order and with error checking. Address information is only transferred to each node during the connection set-up phase, when the route to the destination is discovered and an entry is added to the switching table in each network node through which the connection passes. The signaling protocols used allow the application to specify its requirements and discover link parameters. Acceptable values for service parameters may be negotiated. Routing a packet requires the node to look up the connection id in a table. The packet header can be small, as it only needs to contain this code and any information, such as length, timestamp, or sequence number, which is different for different packets.
+
+Packet switching in networks[edit]
+
+Packet switching is used to optimize the use of the channel capacity available in digital telecommunication networks, such as computer networks, and minimize the transmission latency (the time it takes for data to pass across the network), and to increase robustness of communication.
+
+The best-known use of packet switching is the Internet and most local area networks. The Internet is implemented by the Internet Protocol Suite using a variety of Link Layer technologies. For example, Ethernet and Frame Relay are common. Newer mobile phone technologies (e.g., GPRS, i-mode) also use packet switching.
+
+X.25 is a notable use of packet switching in that, despite being based on packet switching methods, it provided virtual circuits to the user. These virtual circuits carry variable-length packets. In 1978, X.25 provided the first international and commercial packet switching network, the International Packet Switched Service (IPSS). Asynchronous Transfer Mode (ATM) also is a virtual circuit technology, which uses fixed-length cell relay connection oriented packet switching.
+
+Datagram packet switching is also called connectionless networking because no connections are established. Technologies such as Multiprotocol Label Switching (MPLS) and the Resource Reservation Protocol (RSVP) create virtual circuits on top of datagram networks. Virtual circuits are especially useful in building robust failover mechanisms and allocating bandwidth for delay-sensitive applications.
+
+MPLS and its predecessors, as well as ATM, have been called &quot;fast packet&quot; technologies. MPLS, indeed, has been called &quot;ATM without cells&quot;.[20] Modern routers, however, do not require these technologies to be able to forward variable-length packets at multigigabit speeds across the network.
+
+X.25 vs. Frame Relay[edit]
+
+Both X.25 and Frame Relay provide connection-oriented operations. X.25 provides it via the network layer of the OSI Model, whereas Frame Relay provides it via level two, the data link layer. Another major difference between X.25 and Frame Relay is that X.25 requires a handshake between the communicating parties before any user packets are transmitted. Frame Relay does not define any such handshakes. X.25 does not define any operations inside the packet network. It only operates at the user-network-interface (UNI). Thus, the network provider is free to use any procedure it wishes inside the network. X.25 does specify some limited re-transmission procedures at the UNI, and its link layer protocol (LAPB) provides conventional HDLC-type link management procedures. Frame Relay is a modified version of ISDN's layer two protocol, LAPD and LAPB. As such, its integrity operations pertain only between nodes on a link, not end-to-end. Any retransmissions must be carried out by higher layer protocols. The X.25 UNI protocol is part of the X.25 protocol suite, which consists of the lower three layers of the OSI Model. It was widely used at the UNI for packet switching networks during the 1980s and early 1990s, to provide a standardized interface into and out of packet networks. Some implementations used X.25 within the network as well, but its connection-oriented features made this setup cumbersome and inefficient. Frame relay operates principally at layer two of the OSI Model. However, its address field (the Data Link Connection ID, or DLCI) can be used at the OSI network layer, with a minimum set of procedures. Thus, it rids itself of many X.25 layer 3 encumbrances, but still has the DLCI as an ID beyond a node-to-node layer two link protocol. The simplicity of Frame Relay makes it faster and more efficient than X.25. Because Frame relay is a data link layer protocol, like X.25 it does not define internal network routing operations. For X.25 its packet IDs—the virtual circuit and virtual channel numbers have to be correlated to network addresses. The same is true for Frame Relays DLCI. How this is done is up to the network provider. Frame Relay, by virtue of having no network layer procedures is connection-oriented at layer two, by using the HDLC/LAPD/LAPB Set Asynchronous Balanced Mode (SABM). X.25 connections are typically established for each communication session, but it does have a feature allowing a limited amount of traffic to be passed across the UNI without the connection-oriented handshake. For a while, Frame Relay was used to interconnect LANs across wide area networks. However, X.25 and well as Frame Relay have been supplanted by the Internet Protocol (IP) at the network layer, and the Asynchronous Transfer Mode (ATM) and or versions of Multi-Protocol Label Switching (MPLS) at layer two. A typical configuration is to run IP over ATM or a version of MPLS. &lt;Uyless Black, X.25 and Related Protocols, IEEE Computer Society, 1991&gt; &lt;Uyless Black, Frame Relay Networks, McGraw-Hill, 1998&gt; &lt;Uyless Black, MPLS and Label Switching Networks, Prentice Hall, 2001&gt; &lt; Uyless Black, ATM, Volume I, Prentice Hall, 1995&gt;
+
+Packet-switched networks[edit]
+
+Further information: History of the Internet
+
+The history of packet-switched networks can be divided into three overlapping eras: early networks before the introduction of X.25 and the OSI model, the X.25 era when many postal, telephone, and telegraph companies introduced networks with X.25 interfaces, and the Internet era.[21][22]
+
+Early networks[edit]
+
+Research into packet switching at the National Physical Laboratory (NPL) began with a proposal for a wide-area network in 1965,[2] and a local-area network in 1966.[23] ARPANET funding was secured in 1966 by Bob Taylor and planning began in 1967 when he hired Larry Roberts. The NPL network, ARPANET and SITA HLN became operational in 1969. Before the introduction of X.25 in 1973,[24] about twenty different network technologies had been developed. Two fundamental differences involved the division of functions and tasks between the hosts at the edge of the network and the network core. In the datagram system, the hosts have the responsibility to ensure orderly delivery of packets. The User Datagram Protocol (UDP) is an example of a datagram protocol. In the virtual call system, the network guarantees sequenced delivery of data to the host. This results in a simpler host interface with less functionality than in the datagram model. The X.25 protocol suite uses this network type.
+
+Appletalk[edit]
+
+AppleTalk was a proprietary suite of networking protocols developed by Apple Inc. in 1985 for Apple Macintosh computers. It was the primary protocol used by Apple devices through the 1980s and 1990s. AppleTalk included features that allowed local area networks to be established ad hoc without the requirement for a centralized router or server. The AppleTalk system automatically assigned addresses, updated the distributed namespace, and configured any required inter-network routing. It was a plug-n-play system.[25][26]
+
+AppleTalk versions were also released for the IBM PC and compatibles, and the Apple IIGS. AppleTalk support was available in most networked printers, especially laser printers, some file servers and routers. AppleTalk support was terminated in 2009, replaced by TCP/IP protocols.[25]
+
+ARPANET[edit]
+
+The ARPANET was a progenitor network of the Internet and the first network to run the TCP/IP suite using packet switching technologies.
+
+BNRNET[edit]
+
+BNRNET was a network which Bell Northern Research developed for internal use. It initially had only one host but was designed to support many hosts. BNR later made major contributions to the CCITT X.25 project.[27]
+
+CYCLADES[edit]
+
+The CYCLADES packet switching network was a French research network designed and directed by Louis Pouzin. First demonstrated in 1973, it was developed to explore alternatives to the early ARPANET design and to support network research generally. It was the first network to make the hosts responsible for reliable delivery of data, rather than the network itself, using unreliable datagrams and associated end-to-end protocol mechanisms. Concepts of this network influenced later ARPANET architecture.[28][29]
+
+DECnet[edit]
+
+DECnet is a suite of network protocols created by Digital Equipment Corporation, originally released in 1975 in order to connect two PDP-11 minicomputers. It evolved into one of the first peer-to-peer network architectures, thus transforming DEC into a networking powerhouse in the 1980s. Initially built with three layers, it later (1982) evolved into a seven-layer OSI-compliant networking protocol. The DECnet protocols were designed entirely by Digital Equipment Corporation. However, DECnet Phase II (and later) were open standards with published specifications, and several implementations were developed outside DEC, including one for Linux.[30]
+
+DDX-1[edit]
+
+This was an experimental network from Nippon PTT. It mixed circuit switching and packet switching. It was succeeded by DDX-2.[31]
+
+EIN née COST II[edit]
+
+European Informatics Network was a project to link several national networks. It became operational in 1976.[citation needed]
+
+EPSS[edit]
+
+The Experimental Packet Switching System (EPSS) was an experiment of the UK Post Office. It was the first public packet switching network when it began operating in 1977, based on protocols defined by the UK academic community in 1975.[32] Ferranti supplied the hardware and software. The handling of link control messages (acknowledgements and flow control) was different from that of most other networks.[33][34]
+
+GEIS[edit]
+
+As General Electric Information Services (GEIS), General Electric was a major international provider of information services. The company originally designed a telephone network to serve as its internal (albeit continent-wide) voice telephone network.
+
+In 1965, at the instigation of Warner Sinback, a data network based on this voice-phone network was designed to connect GE's four computer sales and service centers (Schenectady, New York, Chicago, and Phoenix) to facilitate a computer time-sharing service, apparently the world's first commercial online service. (In addition to selling GE computers, the centers were computer service bureaus, offering batch processing services. They lost money from the beginning, and Sinback, a high-level marketing manager, was given the job of turning the business around. He decided that a time-sharing system, based on Kemney's work at Dartmouth—which used a computer on loan from GE—could be profitable. Warner was right.)
+
+After going international some years later, GEIS created a network data center near Cleveland, Ohio. Very little has been published about the internal details of their network. (Though it has been stated by some that Tymshare copied the GEIS system to create their network, Tymnet.) The design was hierarchical with redundant communication links. [35] [36]
+
+IPSANET[edit]
+
+IPSANET was a semi-private network constructed by I. P. Sharp Associates to serve their time-sharing customers. It became operational in May 1976.
+
+IPX/SPX[edit]
+
+The Internetwork Packet Exchange (IPX) and Sequenced Packet Exchange (SPX) are Novell networking protocols derived from Xerox Network Systems' IDP and SPP protocols, respectively. They were used primarily on networks using the Novell NetWare operating systems.[37]
+
+Merit Network[edit]
+
+Merit Network, Inc., an independent non-profit 501(c)(3) corporation governed by Michigan's public universities,[38] was formed in 1966 as the Michigan Educational Research Information Triad to explore computer networking between three of Michigan's public universities as a means to help the state's educational and economic development.[39] With initial support from the State of Michigan and the National Science Foundation (NSF), the packet-switched network was first demonstrated in December 1971 when an interactive host to host connection was made between the IBM mainframe computer systems at the University of Michigan in Ann Arbor and Wayne State University in Detroit.[40] In October 1972 connections to the CDC mainframe at Michigan State University in East Lansing completed the triad. Over the next several years in addition to host to host interactive connections the network was enhanced to support terminal to host connections, host to host batch connections (remote job submission, remote printing, batch file transfer), interactive file transfer, gateways to the Tymnet and Telenet public data networks, X.25 host attachments, gateways to X.25 data networks, Ethernet attached hosts, and eventually TCP/IP and additional public universities in Michigan join the network.[40][41] All of this set the stage for Merit's role in the NSFNET project starting in the mid-1980s.
+
+NPL[edit]
+
+In 1965, Donald Davies of the National Physical Laboratory (United Kingdom) designed and proposed a national data network based on packet switching. The proposal was not taken up nationally but by 1967, a pilot experiment had demonstrated the feasibility of packet switched networks.[16][17]
+
+By 1969 he had begun building the Mark I packet-switched network to meet the needs of the multidisciplinary laboratory and prove the technology under operational conditions.[42][18][43] In 1976, 12 computers and 75 terminal devices were attached,[44] and more were added until the network was replaced in 1986. NPL, followed by ARPANET, were the first two networks in the world to use packet switching,[45][46] and were interconnected in the early 1970s.
+
+OCTOPUS[edit]
+
+Octopus was a local network at Lawrence Livermore National Laboratory. It connected sundry hosts at the lab to interactive terminals and various computer peripherals including a bulk storage system. [47] [48] [49]
+
+Philips Research[edit]
+
+Philips Research Laboratories in Redhill, Surrey developed a packet switching network for internal use. It was a datagram network with a single switching node. [50]
+
+PUP[edit]
+
+PARC Universal Packet (PUP or Pup) was one of the two earliest internetwork protocol suites; it was created by researchers at Xerox PARC in the mid-1970s. The entire suite provided routing and packet delivery, as well as higher level functions such as a reliable byte stream, along with numerous applications. Further developments led to Xerox Network Systems (XNS).[51]
+
+RCP[edit]
+
+RCP was an experimental network created by the French PTT. It was used to gain experience with packet switching technology before the specification of Transpac was frozen. RCP was a virtual-circuit network in contrast to CYCLADES which was based on datagrams. RCP emphasised terminal to host and terminal to terminal connection; CYCLADES was concerned with host-to-host communication. TRANSPAC was introduced as an X.25 network. RCP influenced the specification of X.25 [52] [53] [54]
+
+RETD[edit]
+
+Red Especial de Transmisión de Datos was a network developed by Compañía Telefónica Nacional de España. It became operational in 1972 and thus was the first public network. [55] [56] [57]
+
+SCANNET[edit]
+
+&quot;The experimental packet-switched Nordic telecommunication network SCANNET was implemented in Nordic technical libraries in the 1970s, and it included first Nordic electronic journal Extemplo. Libraries were also among first ones in universities to accommodate microcomputers for public use in the early 1980s.&quot; [58]
+
+SITA HLN[edit]
+
+SITA is a consortium of airlines. Their High Level Network became operational in 1969 at about the same time as ARPANET. It carried interactive traffic and message-switching traffic. As with many non-academic networks very little has been published about it. [59]
+
+IBM Systems Network Architecture[edit]
+
+IBM Systems Network Architecture (SNA) is IBM's proprietary networking architecture created in 1974. An IBM customer could acquire hardware and software from IBM and lease private lines from a common carrier to construct a private network.[60]
+
+Telenet[edit]
+
+Telenet was the first FCC-licensed public data network in the United States. It was founded by former ARPA IPTO director Larry Roberts as a means of making ARPANET technology public. He had tried to interest AT&amp;T in buying the technology, but the monopoly's reaction was that this was incompatible with their future. Bolt, Beranack and Newman (BBN) provided the financing. It initially used ARPANET technology but changed the host interface to X.25 and the terminal interface to X.29. Telenet designed these protocols and helped standardize them in the CCITT. Telenet was incorporated in 1973 and started operations in 1975. It went public in 1979 and was then sold to GTE.[61][62]
+
+Tymnet[edit]
+
+Tymnet was an international data communications network headquartered in San Jose, CA that utilized virtual call packet switched technology and used X.25, SNA/SDLC, BSC and ASCII interfaces to connect host computers (servers) at thousands of large companies, educational institutions, and government agencies. Users typically connected via dial-up connections or dedicated async connections. The business consisted of a large public network that supported dial-up users and a private network business that allowed government agencies and large companies (mostly banks and airlines) to build their own dedicated networks. The private networks were often connected via gateways to the public network to reach locations not on the private network. Tymnet was also connected to dozens of other public networks in the U.S. and internationally via X.25/X.75 gateways. (Interesting note: Tymnet was not named after Mr. Tyme. Another employee suggested the name.) [63] [64]
+
+XNS[edit]
+
+Xerox Network Systems (XNS) was a protocol suite promulgated by Xerox, which provided routing and packet delivery, as well as higher level functions such as a reliable stream, and remote procedure calls. It was developed from PARC Universal Packet (PUP).[65][66]
+
+X.25 era[edit]
+
+There were two kinds of X.25 networks. Some such as DATAPAC and TRANSPAC were initially implemented with an X.25 external interface. Some older networks such as TELENET and TYMNET were modified to provide a X.25 host interface in addition to older host connection schemes. DATAPAC was developed by Bell Northern Research which was a joint venture of Bell Canada (a common carrier) and Northern Telecom (a telecommunications equipment supplier). Northern Telecom sold several DATAPAC clones to foreign PTTs including the Deutsche Bundespost. X.75 and X.121 allowed the interconnection of national X.25 networks. A user or host could call a host on a foreign network by including the DNIC of the remote network as part of the destination address.[citation needed]
+
+AUSTPAC[edit]
+
+AUSTPAC was an Australian public X.25 network operated by Telstra. Started by Telecom Australia in the early 1980s, AUSTPAC was Australia's first public packet-switched data network, supporting applications such as on-line betting, financial applications—the Australian Tax Office made use of AUSTPAC—and remote terminal access to academic institutions, who maintained their connections to AUSTPAC up until the mid-late 1990s in some cases. Access can be via a dial-up terminal to a PAD, or, by linking a permanent X.25 node to the network.[citation needed]
+
+ConnNet[edit]
+
+ConnNet was a packet-switched data network operated by the Southern New England Telephone Company serving the state of Connecticut.[citation needed]
+
+Datanet 1[edit]
+
+Datanet 1 was the public switched data network operated by the Dutch PTT Telecom (now known as KPN). Strictly speaking Datanet 1 only referred to the network and the connected users via leased lines (using the X.121 DNIC 2041), the name also referred to the public PAD service Telepad (using the DNIC 2049). And because the main Videotex service used the network and modified PAD devices as infrastructure the name Datanet 1 was used for these services as well. Although this use of the name was incorrect all these services were managed by the same people within one department of KPN contributed to the confusion.[67]
+
+Datapac[edit]
+
+DATAPAC was the first operational X.25 network (1976). It covered major Canadian cities and was eventually extended to smaller centres.[citation needed]
+
+Datex-P[edit]
+
+Deutsche Bundespost operated this national network in Germany. The technology was acquired from Northern Telecom.[citation needed]
+
+Eirpac[edit]
+
+Eirpac is the Irish public switched data network supporting X.25 and X.28. It was launched in 1984, replacing Euronet. Eirpac is run by Eircom.[68][69][70]
+
+HIPA-NET[edit]
+
+Hitachi designed a private network system for sale as a turnkey package to multi-national organizations. In addition to providing X.25 packet switching, message switching software was also included. Messages were buffered at the nodes adjacent to the sending and receiving terminals. Switched virtual calls were not supported, but through the use of &quot;logical ports&quot; an originating terminal could have a menu of pre-defined destination terminals. [71]
+
+Iberpac[edit]
+
+Iberpac is the Spanish public packet-switched network, providing X.25 services. Iberpac is run by Telefonica.[citation needed]
+
+JANET[edit]
+
+JANET was the UK academic and research network, linking all universities, higher education establishments, publicly funded research laboratories.[72] The X.25 network was based mainly on GEC 4000 series switches, and run X.25 links at up to 8 Mbit/s in its final phase before being converted to an IP based network. The JANET network grew out of the 1970s SRCnet (later called SERCnet) network.[73]
+
+PSS[edit]
+
+Packet Switch Stream (PSS) was the UK Post Office (later to become British Telecom) national X.25 network with a DNIC of 2342. British Telecom renamed PSS under its GNS (Global Network Service) name, but the PSS name has remained better known. PSS also included public dial-up PAD access, and various InterStream gateways to other services such as Telex.[citation needed]
+
+Transpac[edit]
+
+Transpac was the national X.25 network in France. It was developed locally at about the same time as DATAPAC in Canada. The development was done by the French PTT and influenced by the experimental RCP network. It began operation in 1978,[74] and served both commercial users and, after Minitel began, consumers.[75]
+
+VENUS-P[edit]
+
+VENUS-P was an international X.25 network that operated from April 1982 through March 2006. At its subscription peak in 1999, VENUS-P connected 207 networks in 87 countries.[76]
+
+Venepaq[edit]
+
+Venepaq is the national X.25 public network in Venezuela. It is run by Cantv and allow direct connection and dial up connections. Provides nationalwide access at very low cost. It provides national and international access. Venepaq allow connection from 19.2 kbit/s to 64 kbit/s in direct connections, and 1200, 2400 and 9600 bit/s in dial up connections.
+
+Internet era[edit]
+
+
+Internet
+
+Visualization of Internet routing paths 
+An Opte Project visualization of routing paths through a portion of the Internet
+ 
+
+
+General[show]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Governance[show]
+
+
+
+
+
+
+
+
+ 
+
+
+Information infrastructure[show]
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Services[show]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Guides[show]
+
+
+Wikipedia book
+List-Class article
+
+ 
+Crystal Clear app linneighborhood.svg Internet portal 
+v · 
+ t · 
+ e
+    
+
+When Internet connectivity was made available to anyone who could pay for an ISP subscription, the distinctions between national networks blurred. The user no longer saw network identifiers such as the DNIC. Some older technologies such as circuit switching have resurfaced with new names such as fast packet switching. Researchers have created some experimental networks to complement the existing Internet.[citation needed]
+
+CSNET[edit]
+
+The Computer Science Network (CSNET) was a computer network funded by the U.S. National Science Foundation (NSF) that began operation in 1981. Its purpose was to extend networking benefits, for computer science departments at academic and research institutions that could not be directly connected to ARPANET, due to funding or authorization limitations. It played a significant role in spreading awareness of, and access to, national networking and was a major milestone on the path to development of the global Internet.[77][78]
+
+Internet2[edit]
+
+Internet2 is a not-for-profit United States computer networking consortium led by members from the research and education communities, industry, and government.[79] The Internet2 community, in partnership with Qwest, built the first Internet2 Network, called Abilene, in 1998 and was a prime investor in the National LambdaRail (NLR) project.[80] In 2006, Internet2 announced a partnership with Level 3 Communications to launch a brand new nationwide network, boosting its capacity from 10 Gbit/s to 100 Gbit/s.[81] In October, 2007, Internet2 officially retired Abilene and now refers to its new, higher capacity network as the Internet2 Network.
+
+NSFNET[edit]
+
+
+ 
+
+
+ NSFNET Traffic 1991, NSFNET backbone nodes are shown at the top, regional networks below, traffic volume is depicted from purple (zero bytes) to white (100 billion bytes), visualization by NCSA using traffic data provided by the Merit Network.
+Main article: NSFNET
+
+The National Science Foundation Network (NSFNET) was a program of coordinated, evolving projects sponsored by the National Science Foundation (NSF) beginning in 1985 to promote advanced research and education networking in the United States.[82] NSFNET was also the name given to several nationwide backbone networks operating at speeds of 56 kbit/s, 1.5 Mbit/s (T1), and 45 Mbit/s (T3) that were constructed to support NSF's networking initiatives from 1985-1995. Initially created to link researchers to the nation's NSF-funded supercomputing centers, through further public funding and private industry partnerships it developed into a major part of the Internet backbone.
+
+NSFNET regional networks[edit]
+
+In addition to the five NSF supercomputer centers, NSFNET provided connectivity to eleven regional networks and through these networks to many smaller regional and campus networks in the United States. The NSFNET regional networks were:[83][84]
+BARRNet, the Bay Area Regional Research Network in Palo Alto, California;
+CERFNET, California Education and Research Federation Network in San Diego, California, serving California and Nevada;
+CICNet, the Committee on Institutional Cooperation Network via the Merit Network in Ann Arbor, Michigan and later as part of the T3 upgrade via Argonne National Laboratory outside of Chicago, serving the Big Ten Universities and the University of Chicago in Illinois, Indiana, Michigan, Minnesota, Ohio, and Wisconsin;
+Merit/MichNet in Ann Arbor, Michigan serving Michigan, formed in 1966, still in operation as of 2016;[85]
+MIDnet in Lincoln, Nebraska serving Arkansas, Iowa, Kansas, Missouri, Nebraska, Oklahoma, and South Dakota;
+NEARNET, the New England Academic and Research Network in Cambridge, Massachusetts, added as part of the upgrade to T3, serving Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont, established in late 1988, operated by BBN under contract to MIT, BBN assumed responsibility for NEARNET on 1 July 1993;[86]
+NorthWestNet in Seattle, Washington, serving Alaska, Idaho, Montana, North Dakota, Oregon, and Washington, founded in 1987;[87]
+NYSERNet, New York State Education and Research Network in Ithaca, New York;
+JVNCNet, the John von Neumann National Supercomputer Center Network in Princeton, New Jersey, serving Delaware and New Jersey;
+SESQUINET, the Sesquicentennial Network in Houston, Texas, founded during the 150th anniversary of the State of Texas;
+SURAnet, the Southeastern Universities Research Association network in College Park, Maryland and later as part of the T3 upgrade in Atlanta, Georgia serving Alabama, Florida, Georgia, Kentucky, Louisiana, Maryland, Mississippi, North Carolina, South Carolina, Tennessee, Virginia, and West Virginia, sold to BBN in 1994; and
+Westnet in Salt Lake City, Utah and Boulder, Colorado, serving Arizona, Colorado, New Mexico, Utah, and Wyoming.
+
+National LambdaRail[edit]
+
+The National LambdaRail was launched in September 2003. It is a 12,000-mile high-speed national computer network owned and operated by the U.S. research and education community that runs over fiber-optic lines. It was the first transcontinental 10 Gigabit Ethernet network. It operates with high aggregate capacity of up to 1.6 Tbit/s and a high 40 Gbit/s bitrate, with plans for 100 Gbit/s.[88][89] The upgrade never took place and NLR ceased operations in March 2014.
+
+TransPAC, TransPAC2, and TransPAC3[edit]
+
+TransPAC2 and TransPAC3, continuations of the TransPAC project, a high-speed international Internet service connecting research and education networks in the Asia-Pacific region to those in the US.[90][91] TransPAC is part of the NSF’s International Research Network Connections (IRNC) program.[92]
+
+Very high-speed Backbone Network Service (vBNS)[edit]
+
+The Very high-speed Backbone Network Service (vBNS) came on line in April 1995 as part of a National Science Foundation (NSF) sponsored project to provide high-speed interconnection between NSF-sponsored supercomputing centers and select access points in the United States.[93] The network was engineered and operated by MCI Telecommunications under a cooperative agreement with the NSF. By 1998, the vBNS had grown to connect more than 100 universities and research and engineering institutions via 12 national points of presence with DS-3 (45 Mbit/s), OC-3c (155 Mbit/s), and OC-12c (622 Mbit/s) links on an all OC-12c backbone, a substantial engineering feat for that time. The vBNS installed one of the first ever production OC-48c (2.5 Gbit/s) IP links in February 1999 and went on to upgrade the entire backbone to OC-48c.[94]
+
+In June 1999 MCI WorldCom introduced vBNS+ which allowed attachments to the vBNS network by organizations that were not approved by or receiving support from NSF.[95] After the expiration of the NSF agreement, the vBNS largely transitioned to providing service to the government. Most universities and research centers migrated to the Internet2 educational backbone. In January 2006, when MCI and Verizon merged,[96] vBNS+ became a service of Verizon Business.[97]
+</pre>
+</div>
 <div tags="" title="POP - Post Office Protocol">
 <pre></pre>
 </div>
@@ -10028,6 +10465,263 @@ With an introduction of CIDR addressing scheme, IP addresses are more efficientl
 </div>
 <div tags="" title="TLS - Transport Layer Security">
 <pre></pre>
+</div>
+<div tags="" title="transmission rate">
+<pre>In telecommunications and computing, bit rate (sometimes written bitrate or as a variable R[1]) is the number of bits that are conveyed or processed per unit of time.
+
+The bit rate is quantified using the bits per second unit (symbol: &quot;bit/s&quot;), often in conjunction with an SI prefix such as &quot;kilo&quot; (1 kbit/s = 1000 bit/s), &quot;mega&quot; (1 Mbit/s = 1000 kbit/s), &quot;giga&quot; (1 Gbit/s = 1000 Mbit/s) or &quot;tera&quot; (1 Tbit/s = 1000 Gbit/s).[2] The non-standard abbreviation &quot;bps&quot; is often used to replace the standard symbol &quot;bit/s&quot;, so that, for example, &quot;1 Mbps&quot; is used to mean one million bits per second.
+
+One byte per second (1 B/s) corresponds to 8 bit/s.
+
+
+
+Contents  [hide] 
+1 Prefixes
+2 In data communications 2.1 Gross bit rate
+2.2 Information rate
+2.3 Network throughput
+2.4 Goodput (data transfer rate)
+2.5 Progress trends
+
+3 Multimedia
+4 Encoding bit rate 4.1 Audio 4.1.1 CD-DA
+4.1.2 MP3
+4.1.3 Other audio
+
+4.2 Video
+4.3 Notes
+
+5 See also
+6 References
+7 External links
+
+
+Prefixes[edit]
+
+When quantifying large bit rates, SI prefixes (also known as metric prefixes or decimal prefixes) are used, thus:
+
+1,000 bit/s rate = 1 kbit/s (one kilobit or one thousand bits per second) 
+1,000,000 bit/s rate = 1 Mbit/s (one megabit or one million bits per second) 
+1,000,000,000 bit/s rate = 1 Gbit/s (one gigabit or one billion bits per second) 
+
+Binary prefixes are sometimes used for bit rates .[3][4] The International Standard (IEC 80000-13) specifies different abbreviations for binary and decimal (SI) prefixes (e.g. 1 KiB/s = 1024 B/s = 8192 bit/s, and 1 MiB/s = 1024 KiB/s).
+
+In data communications [edit]
+
+Gross bit rate[edit]
+
+In digital communication systems, the physical layer gross bitrate,[5] raw bitrate,[6] data signaling rate,[7] gross data transfer rate[8] or uncoded transmission rate[6] (sometimes written as a variable Rb[5][6] or fb[9]) is the total number of physically transferred bits per second over a communication link, including useful data as well as protocol overhead.
+
+In case of serial communications, the gross bit rate is related to the bit transmission time T b     {\displaystyle T_{b}}  T_{b} as:
+R b   = 1 T b     ,   {\displaystyle R_{b}={1 \over T_{b}},}  R_{b}={1 \over T_{b}},
+The gross bit rate is related to the symbol rate or modulation rate, which is expressed in bauds or symbols per second. However, the gross bit rate and the baud value are equal only when there are only two levels per symbol, representing 0 and 1, meaning that each symbol of a data transmission system carries exactly one bit of data; for example, this is not the case for modern modulation systems used in modems and LAN equipment.[10]
+
+For most line codes and modulation methods:
+Symbol rate ≤ Gross bit rate
+More specifically, a line code (or baseband transmission scheme) representing the data using pulse-amplitude modulation with 2N different voltage levels, can transfer N bit/pulse. A digital modulation method (or passband transmission scheme) using 2N different symbols, for example 2N amplitudes, phases or frequencies, can transfer N bit/symbol. This results in:
+Gross bit rate = Symbol rate · N
+An exception from the above is some self-synchronizing line codes, for example Manchester coding and return-to-zero (RTZ) coding, where each bit is represented by two pulses (signal states), resulting in:
+Gross bit rate = Symbol rate/2
+A theoretical upper bound for the symbol rate in baud, symbols/s or pulses/s for a certain spectral bandwidth in hertz is given by the Nyquist law:
+Symbol rate ≤ Nyquist rate = 2 · bandwidth
+In practice this upper bound can only be approached for line coding schemes and for so-called vestigal sideband digital modulation. Most other digital carrier-modulated schemes, for example ASK, PSK, QAM and OFDM, can be characterized as double sideband modulation, resulting in the following relation:
+Symbol rate ≤ Bandwidth
+In case of parallel communication, the gross bit rate is given by
+∑ i = 1  n   log 2   ⁡ M i     T i       {\displaystyle \sum _{i=1}^{n}{\frac {\log _{2}{M_{i}}}{T_{i}}}}  \sum _{i=1}^{n}{\frac {\log _{2}{M_{i}}}{T_{i}}}
+where n is the number of parallel channels, Mi is the number of symbols or levels of the modulation in the i-th channel, and Ti is the symbol duration time, expressed in seconds, for the i-th channel.
+
+Information rate[edit]
+
+The physical layer net bitrate,[11] information rate,[5] useful bit rate,[12] payload rate,[13] net data transfer rate,[8] coded transmission rate,[6] effective data rate[6] or wire speed (informal language) of a digital communication channel is the capacity excluding the physical layer protocol overhead, for example time division multiplex (TDM) framing bits, redundant forward error correction (FEC) codes, equalizer training symbols and other channel coding. Error-correcting codes are common especially in wireless communication systems, broadband modem standards and modern copper-based high-speed LANs. The physical layer net bitrate is the datarate measured at a reference point in the interface between the datalink layer and physical layer, and may consequently include data link and higher layer overhead.
+
+In modems and wireless systems, link adaptation (automatic adaption of the data rate and the modulation and/or error coding scheme to the signal quality) is often applied. In that context, the term peak bitrate denotes the net bitrate of the fastest and least robust transmission mode, used for example when the distance is very short between sender and transmitter.[14] Some operating systems and network equipment may detect the &quot;connection speed&quot;[15] (informal language) of a network access technology or communication device, implying the current net bit rate. Note that the term line rate in some textbooks is defined as gross bit rate,[13] in others as net bit rate.
+
+The relationship between the gross bit rate and net bit rate is affected by the FEC code rate according to the following.
+Net bit rate ≤ Gross bit rate · code rate
+The connection speed of a technology that involves forward error correction typically refers to the physical layer net bit rate in accordance with the above definition.
+
+For example, the net bitrate (and thus the &quot;connection speed&quot;) of an IEEE 802.11a wireless network is the net bit rate of between 6 and 54 Mbit/s, while the gross bit rate is between 12 and 72 Mbit/s inclusive of error-correcting codes.
+
+The net bit rate of ISDN2 Basic Rate Interface (2 B-channels + 1 D-channel) of 64+64+16 = 144 kbit/s also refers to the payload data rates, while the D channel signalling rate is 16 kbit/s.
+
+The net bit rate of the Ethernet 100Base-TX physical layer standard is 100 Mbit/s, while the gross bitrate is 125 Mbit/second, due to the 4B5B (four bit over five bit) encoding. In this case, the gross bit rate is equal to the symbol rate or pulse rate of 125 megabaud, due to the NRZI line code.
+
+In communications technologies without forward error correction and other physical layer protocol overhead, there is no distinction between gross bit rate and physical layer net bit rate. For example, the net as well as gross bit rate of Ethernet 10Base-T is 10 Mbit/s. Due to the Manchester line code, each bit is represented by two pulses, resulting in a pulse rate of 20 megabaud.
+
+The &quot;connection speed&quot; of a V.92 voiceband modem typically refers to the gross bit rate, since there is no additional error-correction code. It can be up to 56,000 bit/s downstreams and 48,000 bit/s upstreams. A lower bit rate may be chosen during the connection establishment phase due to adaptive modulation – slower but more robust modulation schemes are chosen in case of poor signal-to-noise ratio. Due to data compression, the actual data transmission rate or throughput (see below) may be higher.
+
+The channel capacity, also known as the Shannon capacity, is a theoretical upper bound for the maximum net bitrate, exclusive of forward error correction coding, that is possible without bit errors for a certain physical analog node-to-node communication link.
+net bit rate ≤ channel capacity
+The channel capacity is proportional to the analog bandwidth in hertz. This proportionality is called Hartley's law. Consequently, the net bit rate is sometimes called digital bandwidth capacity in bit/s.
+
+Network throughput[edit]
+
+Main article: Throughput
+
+The term throughput, essentially the same thing as digital bandwidth consumption, denotes the achieved average useful bit rate in a computer network over a logical or physical communication link or through a network node, typically measured at a reference point above the datalink layer. This implies that the throughput often excludes data link layer protocol overhead. The throughput is affected by the traffic load from the data source in question, as well as from other sources sharing the same network resources. See also measuring network throughput.
+
+Goodput (data transfer rate)[edit]
+
+Main article: Goodput
+
+Goodput or data transfer rate refers to the achieved average net bit rate that is delivered to the application layer, exclusive of all protocol overhead, data packets retransmissions, etc. For example, in the case of file transfer, the goodput corresponds to the achieved file transfer rate. The file transfer rate in bit/s can be calculated as the file size (in bytes) divided by the file transfer time (in seconds) and multiplied by eight.
+
+As an example, the goodput or data transfer rate of a V.92 voiceband modem is affected by the modem physical layer and data link layer protocols. It is sometimes higher than the physical layer data rate due to V.44 data compression, and sometimes lower due to bit-errors and automatic repeat request retransmissions.
+
+If no data compression is provided by the network equipment or protocols, we have the following relation:
+goodput ≤ throughput ≤ maximum throughput ≤ net bit rate
+for a certain communication path.
+
+Progress trends[edit]
+
+These are examples of physical layer net bit rates in proposed communication standard interfaces and devices:
+
+
+WAN modems
+
+Ethernet LAN
+
+WiFi WLAN
+
+Mobile data
+
+1972: Acoustic coupler 300 baud
+1977: 1200 baud Vadic and Bell 212A
+1986: ISDN introduced with two 64 kbit/s channels (144 kbit/s gross bit rate)
+1990: V.32bis modems: 2400 / 4800 / 9600 / 19200 bit/s
+1994: V.34 modems with 28.8 kbit/s
+1995: V.90 modems with 56 kbit/s downstreams, 33.6 kbit/s upstreams
+1999: V.92 modems with 56 kbit/s downstreams, 48 kbit/s upstreams
+1998: ADSL (ITU G.992.1) up to 10 Mbit/s
+2003: ADSL2 (ITU G.992.3) up to 12 Mbit/s
+2005: ADSL2+ (ITU G.992.5) up to 26 Mbit/s
+2005: VDSL2 (ITU G.993.2) up to 200 Mbit/s
+2014: G.fast (ITU G.9701) up to 1000 Mbit/s
+ 1975: Experimental 2.94 Mbit/s
+1981: 10 Mbit/s 10BASE5 (coaxial cable)
+1990: 10 Mbit/s 10BASE-T (twisted pair)
+1995: 100 Mbit/s Fast Ethernet
+1999: Gigabit Ethernet
+2003: 10 Gigabit Ethernet
+2010: 100 Gigabit Ethernet
+ 1997: 802.11 2 Mbit/s
+1999: 802.11b 11 Mbit/s
+1999: 802.11a 54 Mbit/s
+2003: 802.11g 54 Mbit/s
+2007: 802.11n 600 Mbit/s
+2012: 802.11ac ~1000 Mbit/s
+ 1G: 1981: NMT 1200 bit/s
+
+2G: 1991: GSM CSD and D-AMPS 14.4 kbit/s
+2003: GSM EDGE 296 kbit/s down, 118.4 kbit/s up
+
+3G: 2001: UMTS-FDD (WCDMA) 384 kbit/s
+2007: UMTS HSDPA 14.4 Mbit/s
+2008: UMTS HSPA 14.4 Mbit/s down, 5.76 Mbit/s up
+2009: HSPA+ (Without MIMO) 28 Mbit/s downstreams (56 Mbit/s with 2×2 MIMO), 22 Mbit/s upstreams
+2010: CDMA2000 EV-DO Rev. B 14.7 Mbit/s downstreams
+2011: HSPA+ accelerated (With MIMO) 42 Mbit/s downstreams
+
+Pre-4G: 2007: Mobile WiMAX (IEEE 802.16e) 144 Mbit/s down, 35 Mbit/s up
+2009: LTE 100 Mbit/s downstreams (360 Mbit/s with MIMO 2×2), 50 Mbit/s upstreams
+
+
+See also comparison of mobile phone standards
+ 
+
+For more examples, see list of device bit rates, spectral efficiency comparison table and OFDM system comparison table.
+
+Multimedia [edit]
+
+In digital multimedia, bitrate represents the amount of information, or detail, that is stored per unit of time of a recording. The bitrate depends on several factors:
+The original material may be sampled at different frequencies.
+The samples may use different numbers of bits.
+The data may be encoded by different schemes.
+The information may be digitally compressed by different algorithms or to different degrees.
+
+Generally, choices are made about the above factors in order to achieve the desired trade-off between minimizing the bitrate and maximizing the quality of the material when it is played.
+
+If lossy data compression is used on audio or visual data, differences from the original signal will be introduced; if the compression is substantial, or lossy data is decompressed and recompressed, this may become noticeable in the form of compression artifacts. Whether these affect the perceived quality, and if so how much, depends on the compression scheme, encoder power, the characteristics of the input data, the listener’s perceptions, the listener's familiarity with artifacts, and the listening or viewing environment.
+
+The bitrates in this section are approximately the minimum that the average listener in a typical listening or viewing environment, when using the best available compression, would perceive as not significantly worse than the reference standard:
+
+Encoding bit rate [edit]
+
+In digital multimedia, bit rate often refers to the number of bits used per unit of playback time to represent a continuous medium such as audio or video after source coding (data compression). The encoding bit rate of a multimedia file is the size of a multimedia file in bytes divided by the playback time of the recording (in seconds), multiplied by eight.
+
+For realtime streaming multimedia, the encoding bit rate is the goodput that is required to avoid interrupt:
+encoding bit rate = required goodput
+The term average bitrate is used in case of variable bitrate multimedia source coding schemes. In this context, the peak bit rate is the maximum number of bits required for any short-term block of compressed data.[16]
+
+A theoretical lower bound for the encoding bit rate for lossless data compression is the source information rate, also known as the entropy rate.
+entropy rate ≤ multimedia bit rate
+Audio[edit]
+
+CD-DA[edit]
+
+CD-DA, the standard audio CD, is said to have a data rate of 44.1 kHz/16, meaning that the audio data was sampled 44,100 times per second and with a bit depth of 16. CD-DA is also stereo, using a left and right channel, so the amount of audio data per second is double that of mono, where only a single channel is used.
+
+The bit rate of PCM audio data can be calculated with the following formula:
+b i t   r a t e = s a m p l e   r a t e × b i t   d e p t h × c h a n n e l s   {\displaystyle bit\ rate=sample\ rate\times bit\ depth\times channels}  bit\ rate=sample\ rate\times bit\ depth\times channels
+For example, the bit rate of a CD-DA recording (44.1 kHz sampling rate, 16 bits per sample and two channels) can be calculated as follows:
+44 , 100 × 16 × 2 = 1 , 411 , 200   b i t /  s  = 1 , 411.2   k b i t /  s    {\displaystyle 44,100\times 16\times 2=1,411,200\ \mathrm {bit/s} =1,411.2\ \mathrm {kbit/s} }  44,100\times 16\times 2=1,411,200\ \mathrm {bit/s} =1,411.2\ \mathrm {kbit/s} 
+The cumulative size of a length of PCM audio data (excluding a file header or other metadata) can be calculated using the following formula:
+s i z e   i n   b i t s = s a m p l e   r a t e × b i t   d e p t h × c h a n n e l s × l e n g t h   o f   t i m e   {\displaystyle size\ in\ bits=sample\ rate\times bit\ depth\times channels\times length\ of\ time}  size\ in\ bits=sample\ rate\times bit\ depth\times channels\times length\ of\ time
+The cumulative size in bytes can be found by dividing the file size in bits by the number of bits in a byte, which is eight:
+s i z e   i n   b y t e s = s i z e   i n   b i t s  8     {\displaystyle size\ in\ bytes={\frac {size\ in\ bits}{8}}}  size\ in\ bytes={\frac {size\ in\ bits}{8}}
+Therefore, 80 minutes (4,800 seconds) of CD-DA data requires 846,720,000 bytes of storage:
+44 , 100 × 16 × 2 × 4 , 800  8   = 846 , 720 , 000   b y t e s  ≈ 847   M B    {\displaystyle {\frac {44,100\times 16\times 2\times 4,800}{8}}=846,720,000\ \mathrm {bytes} \approx 847\ \mathrm {MB} }  {\frac {44,100\times 16\times 2\times 4,800}{8}}=846,720,000\ \mathrm {bytes} \approx 847\ \mathrm {MB} 
+MP3[edit]
+
+The MP3 audio format provides lossy data compression. Audio quality improves with increasing bitrate:
+32 kbit/s – generally acceptable only for speech
+96 kbit/s – generally used for speech or low-quality streaming
+128 or 160 kbit/s – mid-range bitrate quality
+192 kbit/s – medium quality bitrate
+256 kbit/s – a commonly used high-quality bitrate
+320 kbit/s – highest level supported by the MP3 standard
+
+Other audio[edit]
+700 bit/s – lowest bitrate open-source speech codec Codec2, but barely recognizable yet, sounds much better at 1.2 kbit/s
+800 bit/s – minimum necessary for recognizable speech, using the special-purpose FS-1015 speech codecs
+2.15 kbit/s – minimum bitrate available through the open-source Speex codec
+6 kbit/s – minimum bitrate available through the open-source Opus codec
+8 kbit/s – telephone quality using speech codecs
+32–500 kbit/s – lossy audio as used in Ogg Vorbis
+256 kbit/s – Digital Audio Broadcasting (DAB) MP2 bit rate required to achieve a high quality signal[17]
+400 kbit/s–1,411 kbit/s – lossless audio as used in formats such as Free Lossless Audio Codec, WavPack, or Monkey's Audio to compress CD audio
+1,411.2 kbit/s – Linear PCM sound format of CD-DA
+5,644.8 kbit/s – DSD, which is a trademarked implementation of PDM sound format used on Super Audio CD.[18]
+6.144 Mbit/s – E-AC-3 (Dolby Digital Plus), an enhanced coding system based on the AC-3 codec
+9.6 Mbit/s – DVD-Audio, a digital format for delivering high-fidelity audio content on a DVD. DVD-Audio is not intended to be a video delivery format and is not the same as video DVDs containing concert films or music videos. These discs cannot be played on a standard DVD-player without DVD-Audio logo.[19]
+18 Mbit/s – advanced lossless audio codec based on Meridian Lossless Packing (MLP)
+
+Video[edit]
+16 kbit/s – videophone quality (minimum necessary for a consumer-acceptable &quot;talking head&quot; picture using various video compression schemes)
+128–384 kbit/s – business-oriented videoconferencing quality using video compression
+400 kbit/s YouTube 240p videos (using H.264)[20]
+750 kbit/s YouTube 360p videos (using H.264)[20]
+1 Mbit/s YouTube 480p videos (using H.264)[20]
+1.15 Mbit/s max – VCD quality (using MPEG1 compression)[21]
+2.5 Mbit/s YouTube 720p videos (using H.264)[20]
+3.5 Mbit/s typ – Standard-definition television quality (with bit-rate reduction from MPEG-2 compression)
+3.8 Mbit/s YouTube 720p (at 60fps mode) videos (using H.264)[20]
+4.5 Mbit/s YouTube 1080p videos (using H.264)[20]
+6.8 Mbit/s YouTube 1080p (at 60 fps mode) videos (using H.264)[20]
+9.8 Mbit/s max – DVD (using MPEG2 compression)[22]
+8 to 15 Mbit/s typ – HDTV quality (with bit-rate reduction from MPEG-4 AVC compression)
+19 Mbit/s approximate – HDV 720p (using MPEG2 compression)[23]
+24 Mbit/s max – AVCHD (using MPEG4 AVC compression)[24]
+25 Mbit/s approximate – HDV 1080i (using MPEG2 compression)[23]
+29.4 Mbit/s max – HD DVD
+40 Mbit/s max – 1080p Blu-ray Disc (using MPEG2, MPEG4 AVC or VC-1 compression)[25]
+250 Mbit/s max – DCP (using JPEG 2000 compression)
+1.4 Gbit/s – 10-bit 4:4:4 Uncompressed 1080p at 24fps
+
+Notes[edit]
+
+For technical reasons (hardware/software protocols, overheads, encoding schemes, etc.) the actual bit rates used by some of the compared-to devices may be significantly higher than what is listed above. For example, telephone circuits using µlaw or A-law companding (pulse code modulation) yield 64 kbit/s.
+</pre>
 </div>
 <div tags="" title="transport layer">
 <pre></pre>
